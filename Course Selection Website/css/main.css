@@ -1,0 +1,246 @@
+/* 
+ * Main style definitions for the timetable website.
+ * Assignment 4, CSCI 1170, Winter 2022
+ * Starter code provided by Dr. Raghav V. Sampangi
+ */
+
+ /* General body styling, body set up as a grid container */
+body {
+	width: 80vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(6, minmax(50px,1fr));
+	grid-template-rows: repeat(5, auto);
+	gap:5px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page banner styling, set to apper on the top row */
+.pg-banner {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+	border-bottom: 5px solid steelblue;
+}
+.header-container {
+	padding: 0 0.5em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Page footer styling, set to apper on the bottom row */
+.pg-footer {
+	padding: 0 0.5em;
+	grid-row: -3/-2;
+	grid-column: 1/-1;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	border-top: 1px solid gold;
+	font-size: smaller;
+}
+
+/* Navigation elements - primary (main nav in the banner), secondary (smaller nav in the banner) and footer nav. */
+.primary-nav {
+	display: flex;
+}
+.primary-nav > a {
+	margin: 0 0 0 1em;
+	color: steelblue;
+	text-decoration: none;
+}
+.primary-nav > a:hover,
+.primary-nav > a:active {
+	color: maroon;
+}
+
+.secondary-nav {
+	background-color: #707372;
+	color: white;
+	font-size: smaller;
+	display: flex;
+	justify-content: flex-end;
+}
+.secondary-nav > a {
+	margin: 0.5em 1em 0.5em 0;
+	color: white;
+	text-decoration: none;
+}
+.secondary-nav > a:hover,
+.secondary-nav > a:active {
+	color: gold;
+}
+
+.footer-nav {
+	display: flex;
+}
+.footer-nav > a {
+	margin: 0 0 0 1em;
+	color: steelblue;
+	text-decoration: none;
+}
+.footer-nav > a:hover,
+.footer-nav > a:active {
+	color: maroon;
+}
+
+
+/* Main content container to include all the courses */
+.container {
+	margin: 10px;
+	min-height: 300px;
+
+	grid-column: 1/5;
+
+	/* Add your styles for the Main container here */
+	display: grid;
+	grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+	gap: 5px;
+}
+
+/* Styling for each division sections */
+#section0{
+	background-color:  rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section1{
+	background-color:   rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section2{
+	background-color:   rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section3{
+	background-color:   rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section4{
+	background-color:  rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section5{
+	background-color:  rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section6{
+	background-color:  rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+#section7{
+	background-color:  rgba(242, 247, 202, 0.904);
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	border:1px dashed black;
+}
+/* Styling font to bold for code class */
+p.code-name{
+	font-weight: bold;
+}
+/* Styling font to bold for professor class */
+p.professor{
+	font-weight: bold;
+}
+/* Styling font to italic and styling fon size to small for enrollment class */
+p.enrollment{
+	font-style: italic;
+	font-size: small;
+}
+/* Styling font to italic and styling fon size to small for schedule class */
+p.schedule{
+	font-style: italic;
+	font-size: small;
+}
+/* Course "bag" styling */
+.course-selection-bag {
+	background-color: rgb(78, 113, 211);
+	grid-column: 5/7;
+	align-items: center;
+	color: white;
+}
+.course-selection-bag h2{
+	padding-left: 15px;
+}
+.course-selection-bag p{
+	padding-left: 15px;
+}
+
+/* Used @media screen and max-width to add a responsive behaviour to webpage after certain width */
+@media screen and (max-width:840px){
+	body{
+		/* background-color: yellow; */
+		gap:0px;
+	}
+	.pg-banner {
+		grid-row: 1/2;
+		grid-column: 1/-1;
+		/* border-bottom: 1px steelblue solid; */
+	}
+	.header-container {
+		padding: 0 0.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.course-selection-bag{
+		grid-row: 2/3;
+		grid-column: 1/-1;
+	}
+	.container {
+		margin: 10px;
+		min-height: 300px;
+	
+		grid-column: 1/-1;
+	
+		display: grid;
+		grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+		gap: 5px;
+	}
+	.pg-footer{
+		flex-direction: column;
+	}
+}
+
+
